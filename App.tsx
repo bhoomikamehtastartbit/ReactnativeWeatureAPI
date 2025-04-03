@@ -8,11 +8,12 @@ import {
 } from 'react-native';
 import Geolocation from '@react-native-community/geolocation';
 
+// Location Interface
 interface Location {
   name: string;
   country: string;
 }
-
+// Weather Interface
 interface Weather {
   main: {
     temp: number;
