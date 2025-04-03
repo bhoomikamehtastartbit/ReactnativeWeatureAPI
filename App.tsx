@@ -60,7 +60,7 @@ const App: React.FC = () => {
         }
       },
       err => {
-        setError('Failed to get location');
+        setError('Failed to get location so please try again');
         setLoading(false);
       },
       { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 },
@@ -127,12 +127,12 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   location: {
-    fontSize: 24,
+    fontSize: 22,
     fontWeight: 'bold',
     marginBottom: 10,
   },
   temperature: {
-    fontSize: 48,
+    fontSize: 46,
     fontWeight: 'bold',
     marginBottom: 10,
   },
