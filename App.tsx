@@ -29,12 +29,14 @@ interface Weather {
 //need to add key and need to create env file for this
 const WEATHER_API_KEY = 'YOUR_API_KEY'; // Replace with your OpenWeatherMap API key
 
+//React Class
 const App: React.FC = () => {
   const [location, setLocation] = useState<Location | null>(null);
   const [weather, setWeather] = useState<Weather | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-
+  
+  //hook for get weather details
   useEffect(() => {
     Geolocation.getCurrentPosition(
       async position => {
