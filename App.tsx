@@ -58,6 +58,7 @@ const App: React.FC = () => {
           setWeather(weatherData);
           setLoading(false);
         } catch (err) {
+          //error handling
           setError('Failed to fetch weather data');
           setLoading(false);
         }
@@ -77,7 +78,7 @@ const App: React.FC = () => {
       </SafeAreaView>
     );
   }
-
+  //show error message
   if (error) {
     return (
       <SafeAreaView style={styles.container}>
